@@ -4,6 +4,19 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
+ class GameFrame extends JFrame {
+    GameFrame(){
+        GamePanel panel = new GamePanel();
+        this.add(panel);
+        this.setTitle("Snake");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
+        this.pack();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+
+    }
+}
 
 public class GamePanel extends JPanel implements ActionListener {
     static final int SCREEN_WIDTH = 600;
@@ -183,3 +196,10 @@ public class GamePanel extends JPanel implements ActionListener {
          }
      }
 }
+ class SnakeGame {
+    public static void main(String[] args) {
+        GameFrame frame = new GameFrame();
+    }
+
+}
+
